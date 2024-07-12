@@ -1,8 +1,8 @@
 node{
     def dockerImage
-    environment {
-        dockerHome = tool name: 'Docker', type: 'org.jenkinsci.plugins.docker.commons.tools.DockerTool'
-    }
+    // environment {
+    //     dockerHome = tool name: 'Docker', type: 'org.jenkinsci.plugins.docker.commons.tools.DockerTool'
+    // }
     stage('Checkout')
     {
         git branch: 'main' ,url:'https://github.com/gem-kartikey/Jenkins_docker_pipeline.git'
