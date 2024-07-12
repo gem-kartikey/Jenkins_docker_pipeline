@@ -3,9 +3,7 @@ node{
 
     stage('Checkout')
     {
-        checkout([$class:'GitSCM',
-        branches:[[name:'*/main']],
-        userRemoteConfigs:[[urls:'https://github.com/gem-kartikey/Jenkins_docker_pipeline']]])
+        git branch: 'main' ,url:'https://github.com/gem-kartikey/Jenkins_docker_pipeline.git'
     }
     stage('Build Docker Image')
     {
