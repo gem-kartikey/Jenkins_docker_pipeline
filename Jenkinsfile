@@ -9,9 +9,11 @@ node{
     }
     stage('Build Docker Image')
     {
-        dockerImage = docker.build('nodejs-app','-f Dockerfile .')
+        // dockerImage = docker.build('nodejs-app','-f Dockerfile .')
+        sh "Docker buld -t node-app ."
     }
     stage('Run Docker Container'){
-        dockerImage.run('-p 4000:4000')
+        // dockerImage.run('-p 4000:4000')
+        sh "Docker run -p 4000:4000 node-app"
     }
 }
